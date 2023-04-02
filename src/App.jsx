@@ -1,31 +1,24 @@
-import React, { useState } from 'react';
-//import  ReactDOM  from 'react';
-//import React , {useState} from "react";
-const App=()=>{
-    const [name, setName]= useState("")
-    const [fullName,setFullName]=useState()
-
-    const inputEvent=(event)=>{
-        console.log(event.target.value);
-        setName(event.target.value);
-    };
-    const onSubmit=()=>{
-        setFullName(name);
-    }
+import React from 'react';
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import Home from "./Home";
+import Navbar from './Navbar';
+import Service from "./Service";
+import Contact  from "./Contact";
+import About  from "./About";
+import {Routes, Route } from "react-router-dom";
+import Footer from "./Footer";
+const App =()=>{
     return (
-<>
-<div>
-    <h1>
-        hello {fullName}
-    </h1>
-    <input type="text"  place holder ="enter your name"
-    onChange={inputEvent}
-    value={name}
-     />
-    <button onClick={onSubmit
-    }> click me </button>
-
-</div>
-</>)
-}
+    <>    
+    <Navbar />
+<Routes>
+<Route exact path="/" Component={Home} />
+        <Route exact path="/about" Component={About} />
+        <Route exact path="/service" Component={Service} />
+        <Route exact path="/contact" Component={Contact} />
+</Routes>
+<Footer />
+    </>
+    );
+};
 export default App;

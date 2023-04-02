@@ -1,42 +1,85 @@
 *{
-    box-sizing: border-box;
-    padding: 0;
     margin: 0;
-    background-color: rgb;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-div{
+
+.navbar{
+    background-color: #fff !important;
+}
+.navbar-brand{
+    font-size: 1.9rem;
+    color: aqua;
+}
+.navbar a{
+    font-size: 1.3rem;
+    text-transform: capitalize;
+}
+.menu_active{
+    font-weight: bold;
+    border-bottom: 1px solid rgb(210, 17, 207);
+}
+.navbar a:hover{
+    color: aqua;
+}
+ @media(max-width:991px){
+    .navbar-brand{
+        font-size: 1.5rem !important;
+
+    }
+    .menu_active{
+        font-weight: bold;
+        border-bottom: none;
+    }
+}
+#header{
     width: 100%;
-    height: 100vh;
-    background-color: #ced508;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
+    height: 80vh;
+    margin-top:70px ;
 }
-h1{
-    columns: white;
-    background: transparent;
-    text-shadow: 0 2px 2px black;
-
+#header h1{
+    margin: 0 0 10px 0;
+    font-size: 36px;
+    font-weight: 700;
+    color: black;
 }
-input{
-    width: 50%;
-    padding: 10px 20px;
-    border: none;
-    outline: none;
-    margin: 20px 0;
+#header .brand-name{
+    color: rgb(107, 225, 34);
+}
+#header h2{
+    color: rgb(36, 192, 220);
+    font-size: 24px;
+}
+#header .btn-get-started{
+font-weight: 500;
+font-size: 16px;
+letter-spacing: 1px;
+display: inline-block;
+padding: 10px 30px;
+border-radius: 50px;
+transition: 0.5s;
+color: rgb(96, 13, 220);
+background-color: rgb(212, 58, 215);
+border: 2px solid rgb(75, 142, 251);
+text-decoration: none;
+}
+#header .btn-get-started:hover{
+    background-color: #2136bd;
+color: rgb(215 58 194);
+}
+.header-img{
     text-align: center;
 }
-button{
-    line-height: 24px;
-    padding: 0 20px;
-    background: rgba(26, 17, 201, 0.4);
-    color: wheat;
-    border: 2px solid grey;
-   outline: none;
-   border-radius: 6px;
-   text-transform: uppercase;
-   cursor: pointer;
+#header .animated{
+    animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+@-webkit-keyframes up-down{
+    0% {
+        transform: translateY(10px);
+
+    }
+    100% {
+transform: translateY(-10px);
+    }
 }
